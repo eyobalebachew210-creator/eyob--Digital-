@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Eyob Digital Work | Digital Services</title>
+
+  <meta name="description"
+        content="Eyob Digital Work provides affordable digital services, website creation, document services and online support.">
+
+  <meta name="theme-color" content="#0f172a">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f8fafc;
+      color: #1e293b;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* NAVIGATION */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #0f172a;
+      padding: 14px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.15);
+    }
+
+    .logo {
+      color: white;
+      font-size: 21px;
+      font-weight: bold;
+    }
+
+    .logo span {
+      color: #38bdf8;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      color: #38bdf8;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(135deg, #0f172a, #1e3a8a, #0369a1);
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 8vw, 70px);
+      margin-bottom: 15px;
+    }
+
+    .hero h1 span {
+      color: #38bdf8;
+    }
+
+    .hero p {
+      font-size: 19px;
+      max-width: 700px;
+      margin: auto;
+      color: #e0f2fe;
+    }
+
+    .buttons {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 24px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+      background: #38bdf8;
+      color: #082f49;
+    }
+
+    .btn-primary:hover {
+      background: white;
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      border: 2px solid white;
+      color: white;
+    }
+
+    .btn-secondary:hover {
+      background: white;
+      color: #0f172a;
+    }
+
+    /* SECTIONS */
+
+    section {
+      padding: 70px 6%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+      font-size: 34px;
+      color: #0f172a;
+    }
+
+    .section-title p {
+      color: #64748b;
+      margin-top: 8px;
+    }
+
+    /* SERVICES */
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background: white;
+      padding: 28px 22px;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(15,23,42,0.08);
+      transition: 0.3s;
+      text-align: center;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+    }
+
+    .icon {
+      font-size: 42px;
+      margin-bottom: 12px;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #0f172a;
+    }
+
+    .card p {
+      color: #64748b;
+      font-size: 15px;
+    }
+
+    /* PRICING */
+
+    .pricing {
+      background: #e2e8f0;
+    }
+
+    .price-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .price-card {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    }
+
+    .price {
+      font-size: 30px;
+      font-weight: bold;
+      color: #0369a1;
+      margin: 15px 0;
+    }
+
+    .price-card ul {
+      list-style: none;
+      margin-bottom: 20px;
+    }
+
+    .price-card li {
+      padding: 5px;
+      color: #475569;
+    }
+
+    /* ABOUT */
+
+    .about {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .about p {
+      color: #475569;
+      font-size: 17px;
+    }
+
+    /* ORDER */
+
+    .order {
+      background: #f1f5f9;
+    }
+
+    .order-form {
+      max-width: 650px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 13px;
+      border: 1px solid #cbd5e1;
+      border-radius: 7px;
+      font-size: 15px;
+      outline: none;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: #0284c7;
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .submit-btn {
+      width: 100%;
+      border: none;
+      padding: 14px;
+      border-radius: 8px;
+      background: #16a34a;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .submit-btn:hover {
+      background: #15803d;
+    }
+
+    /* CONTACT */
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact-box {
+      max-width: 700px;
+      margin: auto;
+      background: #0f172a;
+      color: white;
+      padding: 35px;
+      border-radius: 12px;
+    }
+
+    .contact-box p {
+      margin: 10px 0;
+    }
+
+    .contact-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 13px 25px;
+      background: #25d366;
+      color: white;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #020617;
+      color: #94a3b8;
+      text-align: center;
+      padding: 25px 15px;
+    }
+
+    footer strong {
+      color: white;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 700px) {
+
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav ul {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      nav ul li a {
+        font-size: 12px;
+      }
+
+      .hero {
+        min-height: 80vh;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      section {
+        padding: 55px 5%;
+      }
+
+      .section-title h2 {
+        font-size: 28px;
+      }
+
+      .order-form {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+
+  <nav>
+    <div class="logo">
+      Eyob <span>Digital Work</span>
+    </div>
+
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#order">Order</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+
+  <!-- HERO -->
+
+  <section class="hero" id="home">
+
+    <div class="hero-content">
+
+      <h1>
+        Eyob <span>Digital Work</span>
+      </h1>
+
+      <p>
+        Affordable digital services for individuals,
+        students, small businesses and organizations.
+      </p>
+
+      <div class="buttons">
+
+        <a href="#order" class="btn btn-primary">
+          Order a Service
+        </a>
+
+        <a href="#services" class="btn btn-secondary">
+          View Services
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SERVICES -->
+
+  <section id="services">
+
+    <div class="section-title">
+
+      <h2>Our Services</h2>
+
+      <p>
+        Simple, affordable and professional digital support.
+      </p>
+
+    </div>
+
+    <div class="services">
+
+      <div class="card">
+
+        <div class="icon">🌐</div>
+
+        <h3>Website Creation</h3>
+
+        <p>
+          Simple websites for individuals,
+          businesses and organizations.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <div class="icon">📄</div>
+
+        <h3>Document Services</h3>
+
+        <p>
+          Document formatting, typing,
+          editing and digital preparation.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <div class="icon">🎨</div>
+
+        <h3>Digital Design</h3>
+
+        <p>
+          Simple posters, advertisements,
+          social media graphics and designs.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <div class="icon">📱</div>
+
+        <h3>Online Support</h3>
+
+        <p>
+          Help with websites, online forms,
+          digital tools and basic technology.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <div class="icon">📊</div>
+
+        <h3>Data Services</h3>
+
+        <p>
+          Basic data organization,
+          spreadsheets and digital records.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <div class="icon">💡</div>
+
+        <h3>Digital Consultation</h3>
+
+        <p>
+          Practical guidance for starting
+          and improving digital projects.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PRICING -->
+
+  <section class="pricing" id="pricing">
+
+    <div class="section-title">
+
+      <h2>Simple Pricing</h2>
+
+      <p>
+        Prices can be adjusted according to the project.
+      </p>
+
+    </div>
+
+
+    <div class="price-grid">
+
+      <div class="price-card">
+
+        <h3>Basic</h3>
+
+        <div class="price">
+          300 ETB
+        </div>
+
+        <ul>
+          <li>✔ Basic digital service</li>
+          <li>✔ Simple task</li>
+          <li>✔ Fast delivery</li>
+        </ul>
+
+        <a href="#order" class="btn btn-primary">
+          Order
+        </a>
+
+      </div>
+
+
+      <div class="price-card">
+
+        <h3>Standard</h3>
+
+        <div class="price">
+          700 ETB
+        </div>
+
+        <ul>
+          <li>✔ More detailed service</li>
+          <li>✔ Professional formatting</li>
+          <li>✔ Customer support</li>
+        </ul>
+
+        <a href="#order" class="btn btn-primary">
+          Order
+        </a>
+
+      </div>
+
+
+      <div class="price-card">
+
+        <h3>Premium</h3>
+
+        <div class="price">
+          1,500+ ETB
+        </div>
+
+        <ul>
+          <li>✔ Complete project</li>
+          <li>✔ Website / digital work</li>
+          <li>✔ Priority support</li>
+        </ul>
+
+        <a href="#order" class="btn btn-primary">
+          Order
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ABOUT -->
+
+  <section id="about">
+
+    <div class="section-title">
+
+      <h2>About Eyob Digital Work</h2>
+
+    </div>
+
+    <div class="about">
+
+      <p>
+        Eyob Digital Work is an independent digital service
+        project focused on providing affordable and practical
+        digital solutions. The goal is to help customers,
+        students, individuals and small businesses access
+        useful digital services without complicated processes.
+      </p>
+
+      <br>
+
+      <p>
+        Customers can choose a service, submit an order,
+        and communicate directly for project details,
+        pricing and delivery.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- ORDER FORM -->
+
+  <section class="order" id="order">
+
+    <div class="section-title">
+
+      <h2>Place an Order</h2>
+
+      <p>
+        Complete the form and send your request.
+      </p>
+
+    </div>
+
+
+    <form class="order-form" onsubmit="sendOrder(event)">
+
+      <div class="form-group">
+
+        <label for="name">
+          Your Name
+        </label>
+
+        <input
+          type="text"
+          id="name"
+          placeholder="Enter your name"
+          required
+        >
+
+      </div>
+
+
+      <div class="form-group">
+
+        <label for="phone">
+          Phone Number
+        </label>
+
+        <input
+          type="tel"
+          id="phone"
+          placeholder="Enter your phone number"
+          required
+        >
+
+      </div>
+
+
+      <div class="form-group">
+
+        <label for="service">
+          Select Service
+        </label>
+
+        <select id="service" required>
+
+          <option value="">
+            Choose a service
+          </option>
+
+          <option>
+            Website Creation
+          </option>
+
+          <option>
+            Document Services
+          </option>
+
+          <option>
+            Digital Design
+          </option>
+
+          <option>
+            Online Support
+          </option>
+
+          <option>
+            Data Services
+          </option>
+
+          <option>
+            Digital Consultation
+          </option>
+
+          <option>
+            Other
+          </option>
+
+        </select>
+
+      </div>
+
+
+      <div class="form-group">
+
+        <label for="message">
+          Project Details
+        </label>
+
+        <textarea
+          id="message"
+          placeholder="Describe what you need..."
+          required
+        ></textarea>
+
+      </div>
+
+
+      <button
+        type="submit"
+        class="submit-btn"
+      >
+        📲 Send Order on WhatsApp
+      </button>
+
+    </form>
+
+  </section>
+
+
+  <!-- CONTACT -->
+
+  <section class="contact" id="contact">
+
+    <div class="section-title">
+
+      <h2>Contact Eyob Digital Work</h2>
+
+    </div>
+
+    <div class="contact-box">
+
+      <h3>Let's Work Together</h3>
+
+      <p>
+        Have a digital project?
+      </p>
+
+      <p>
+        Contact us to discuss your requirements,
+        price and delivery time.
+      </p>
+
+      <!-- Replace the number below with your WhatsApp number -->
+
+      <a
+        class="contact-button"
+        href="https://wa.me/251XXXXXXXXX"
+        target="_blank"
+      >
+        💬 Contact on WhatsApp
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>
+      © <span id="year"></span>
+      <strong>Eyob Digital Work</strong>.
+      All rights reserved.
+    </p>
+
+    <p>
+      Digital Services • Websites • Online Support
+    </p>
+
+  </footer>
+
+
+  <!-- JAVASCRIPT -->
+
+  <script>
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+
+    function sendOrder(event) {
+
+      event.preventDefault();
+
+      const name =
+        document.getElementById("name").value;
+
+      const phone =
+        document.getElementById("phone").value;
+
+      const service =
+        document.getElementById("service").value;
+
+      const message =
+        document.getElementById("message").value;
+
+
+      /*
+        IMPORTANT:
+        Replace 251XXXXXXXXX below with your
+        WhatsApp number in international format.
+
+        Example:
+        Ethiopia +251 9XXXXXXXX
+        becomes:
+        2519XXXXXXXX
+      */
+
+      const whatsappNumber =
+        "251XXXXXXXXX";
+
+
+      const text =
+        "Hello Eyob Digital Work,%0A%0A" +
+        "New Service Order%0A%0A" +
+        "Name: " + encodeURIComponent(name) + "%0A" +
+        "Phone: " + encodeURIComponent(phone) + "%0A" +
+        "Service: " + encodeURIComponent(service) + "%0A" +
+        "Details: " + encodeURIComponent(message);
+
+
+      const url =
+        "https://wa.me/" +
+        whatsappNumber +
+        "?text=" +
+        text;
+
+
+      window.open(url, "_blank");
+
+    }
+
+  </script>
+
+</body>
+          </html>
